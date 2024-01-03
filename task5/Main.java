@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Welocome to your calculator");
+        System.out.println("Welcome to your calculator");
         int decision = 1;
 
         do {
@@ -36,7 +36,11 @@ public class Main {
                     System.out.printf("%5.0f%5s%5.0f%5s%8.2f%n", num1, "*", num2, "=", calculator.multiplication());
                     break;
                 case 4:
-                    System.out.printf("%5.0f%5s%5.0f%5s%8.2f%n", num1, "/", num2, "=", calculator.division());
+                    if (num2 == 0) {
+                        System.out.println("It is not possible to divide by 0");
+                    }else {
+                        System.out.printf("%5.0f%5s%5.0f%5s%8.2f%n", num1, "/", num2, "=", calculator.division());
+                    }
                     break;
                 default:
                     System.out.println("Invalid option");
