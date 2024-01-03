@@ -41,7 +41,7 @@ public class Catalog {
                 if (product.getProductStock()>0){
                     product.setProductStock(product.getProductStock()-1);
                 }else{
-                    System.out.println("The product is not in stock");
+                    products.remove(product);
                 }
             }else {
                 System.out.println("Code not found");
